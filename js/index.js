@@ -27,17 +27,17 @@ $(".float-box").on("mouseenter", "div", function() {
     className = className ? className.split(" ")[0] : "";
     if (className == "QR-code") {
         $(this).addClass("active")
-        $(this).children("div").stop(true).fadeIn(150);
+        $(this).children("div").stop(true).fadeIn(275);
     } else if (className == "my-collection" || className == "browser-history" || className == "feed-back" || className == "back-top") {
         $(this).addClass("active")
         $(this).children("div").show().stop(true).animate({
             width: "75px"
-        }, 150);
+        }, 275);
     } else if(className == "contact-number") {
         $(this).addClass("active");
         $(this).children("div").show().stop(true).animate({
             width: "122px"
-        }, 150);
+        }, 275);
     }
 })
 $(".float-box").on("mouseleave", "div", function() {
