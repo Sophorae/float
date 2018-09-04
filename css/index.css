@@ -8,32 +8,30 @@
 }
 .float-box > div {
     position: relative;
-    height: 40px;
-    border: 1px solid #F5F5F5;
-    border-bottom: none;
-}
-.float-box > div > div:first-child {
-    height: 40px;
     text-align: center;
     line-height: 40px;
     font-size: 20px;
+    height: 40px;
+    border: 1px solid #F5F5F5;
+    border-bottom: none;
+    cursor: pointer;
 }
-.float-box > div > div:last-child {
+.float-box > div:last-child {
+    font-size: 12px;
+    border-bottom: 1px solid #F5F5F5;
+}
+.float-box > div > div {
     position: absolute;
 }
-.float-box > div:last-child > div:first-child {
-    font-size: 12px;
-    border-bottom: 1px solid #f5f5f5;
-}
-.float-box .QR-code:hover {
+.float-box > div.active {
     background: #F29718;
 }
-.float-box .QR-code:hover > div:first-child span::before {
+.float-box > div.active span::before {
     color: #ffffff;
 }
-.float-box .QR-code > div:last-child {
-    top: -1px;
+.float-box .QR-code > div {
     display: none;
+    top: -1px;
     left: -288px;
     padding: 0 10px;
     width: 258px;
@@ -41,53 +39,38 @@
     border: 1px solid #F0F0F0;
     border-radius: 4px;
 }
-.float-box .QR-code:hover > div:last-child {
-    display: block;
-}
-.float-box .QR-code > div:last-child div {
+.float-box .QR-code > div div {
     float: left;
     width: 129px;
     height: 151px;
 }
-.float-box .QR-code > div:last-child div img {
+.float-box .QR-code > div div img {
     display: block;
     width: 70px;
     height: 70px;
-    margin: 25px auto 10px;
+    margin: 25px auto 10px; 
 }
-.float-box .QR-code > div:last-child div p {
+.float-box .QR-code > div div p {
     text-align: center;
     font-size: 12px;
     line-height: 17px;
 }
-.float-box .my-collection:hover {
-    background: #F29718;
-}
-.float-box .my-collection:hover div:first-child::before {
-    color: #ffffff;
-}
-.float-box .my-collection div:last-child {
+
+.float-box .slide-left > div {
+    display: none;
     top: 0;
     right: 38px;
     width: 0;
     height: 40px;
+    padding-left: 23px;
+    overflow: hidden;
+    text-align: left;
     font-size: 14px;
-    color: #ffffff;
-    line-height: 40px;
     background: #F29718;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    transition: 500ms
 }
-.float-box .my-collection:hover div:last-child {
-    width: 65px;
-    padding-left: 23px;
-}
-.float-box .my-collection div:last-child a {
-    display: none;
-    text-decoration: none;
+.float-box .slide-left > div a {
     color: #ffffff;
-}
-.float-box .my-collection:hover div:last-child a {
-    display: inline-block;
+    text-decoration: none;
 }

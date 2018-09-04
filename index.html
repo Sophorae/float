@@ -10,6 +10,9 @@
             margin: 0;
             padding: 0;
         }
+        html, body {
+            height: 2000px;
+        }
     </style>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./iconfont/iconfont.css">
@@ -17,9 +20,9 @@
 <body>
     <div class="float-box">
         <div class="QR-code">
-                <div class="icon--">
-                    <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span>
-                </div>
+            <span class="icon--">
+                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span>
+            </span>
             <div>
                 <div class="iautos-app">
                     <img src="https://static.iautos.cn/www/iautos/dist/image/iautos-app-download.png" alt="">
@@ -33,16 +36,36 @@
                 </div>
             </div>
         </div>
-        <div class="my-collection">
-            <div class="icon--3"></div>
+        <div class="my-collection slide-left">
+            <span class="icon--3"></span>
             <div>
                 <a href="javascript:;">我的收藏</a>
             </div>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="browser-history slide-left">
+            <span class="icon--2"></span>
+            <div>
+                <a href="javascript:;">浏览历史</a>
+            </div>
+        </div>
+        <div class="contact-number slide-left">
+            <span class="icon--400"></span>
+            <div>
+                <a href="javascript:;">400-822-0321</a>
+            </div>
+        </div>
+        <div class="feed-back slide-left">
+            <span class="icon--4"></span>
+            <div>
+                <a href="javascript:;">意见反馈</a>
+            </div>
+        </div>
+        <div class="back-top slide-left">
+            <span class="icon--1"></span>
+            <div>
+                <a href="javascript:;">返回顶部</a>
+            </div>
+        </div>
 
 
 
@@ -59,4 +82,5 @@
     </div>
 </body>
 </html>
+<script src="./js/jquery.js"></script>
 <script src="./js/index.js"></script>
