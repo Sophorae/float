@@ -1,7 +1,7 @@
 @charset "utf-8";
 .float-box {
     position: fixed;
-    top: 100px;
+    top: 300px;
     right: 100px;
     width: 40px;
     height: 240px;
@@ -29,7 +29,7 @@
 .float-box > div.active span::before {
     color: #ffffff;
 }
-.float-box .QR-code > div {
+.float-box .QR-code .code-info {
     display: none;
     top: -1px;
     left: -288px;
@@ -39,24 +39,24 @@
     border: 1px solid #F0F0F0;
     border-radius: 4px;
 }
-.float-box .QR-code > div div {
+.float-box .QR-code .code-info div {
     float: left;
     width: 129px;
     height: 151px;
 }
-.float-box .QR-code > div div img {
+.float-box .QR-code .code-info div img {
     display: block;
     width: 70px;
     height: 70px;
     margin: 25px auto 10px; 
 }
-.float-box .QR-code > div div p {
+.float-box .QR-code .code-info div p {
     text-align: center;
     font-size: 12px;
     line-height: 17px;
 }
 
-.float-box .slide-left > div {
+.float-box .slide-left  .slide-info {
     display: none;
     top: 0;
     right: 38px;
@@ -70,7 +70,7 @@
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
-.float-box .slide-left > div a {
+.float-box .slide-left  .slide-info a {
     color: #ffffff;
     text-decoration: none;
 }

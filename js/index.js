@@ -3,15 +3,15 @@ $(".float-box").on("mouseenter", "div", function() {
     className = className ? className.split(" ")[0] : "";
     if (className == "QR-code") {
         $(this).addClass("active")
-        $(this).children("div").stop(true).fadeIn(275);
+        $(this).children(".code-info").stop(true).fadeIn(275);
     } else if (className == "my-collection" || className == "browser-history" || className == "feed-back" || className == "back-top") {
         $(this).addClass("active")
-        $(this).children("div").show().stop(true).animate({
+        $(this).children(".slide-info").show().stop(true).animate({
             width: "75px"
         }, 275);
     } else if(className == "contact-number") {
         $(this).addClass("active");
-        $(this).children("div").show().stop(true).animate({
+        $(this).children(".slide-info").show().stop(true).animate({
             width: "122px"
         }, 275);
     }
@@ -21,10 +21,10 @@ $(".float-box").on("mouseleave", "div", function() {
     className = className ? className.split(" ")[0] : "";
     if (className == "QR-code") {
         $(this).removeClass("active")
-        $(this).children("div").stop(true).fadeOut(150);
+        $(this).children(".code-info").stop(true).fadeOut(150);
     } else if (className == "my-collection" || className == "browser-history" || className == "contact-number" || className == "feed-back" || className == "back-top") {
         var this_ = this;
-        $(this).children("div").stop(true).animate({
+        $(this).children(".slide-info").stop(true).animate({
             width: "0"
         }, 150, function() {
             $(this).hide();
