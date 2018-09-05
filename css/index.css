@@ -28,6 +28,13 @@
     color: #ffffff;
     cursor: pointer;
 }
+.float-box > div.clicked {
+    background: #F29718;
+}
+.float-box > div.clicked span::before {
+    color: #ffffff;
+    cursor: pointer;
+}
 .float-box .QR-code .code-info {
     display: none;
     top: -1px;
@@ -87,9 +94,17 @@
     z-index: 50;
 }
 .float-box .slide-left .content-info .content-title {
+    position: relative;
     font-size: 18px;
     height: 57px;
     line-height: 57px;
+}
+.float-box .slide-left .content-info .content-title i {
+    position: absolute;
+    top: 25px;
+    right: 6px;
+    font-size: 12px;
+    cursor: pointer;
 }
 .float-box .slide-left .content-info .cars-list  li {
     float: left;
@@ -148,7 +163,7 @@
 .float-box .slide-left .content-info .cars-list li a .car-info .car-price span {
     font-size: 12px;
 }
-.float-box .slide-left .content-info i {
+.float-box .slide-left .content-info em {
     position: absolute;
     top: 342px;
     right: -3px;

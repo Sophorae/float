@@ -38,6 +38,16 @@ $(".back-top").on("click", function() {
     }, 200)
 })
 $(".slide-left").on("click", function() {
+    $(".slide-left").removeClass("clicked")
     $(".content-info").hide();
+    $(this).addClass("clicked")
     $(this).children(".content-info").show();
+})
+$(".close-info").on("click", function() {
+    event.stopPropagation();
+    $(".content-info").hide();
+    $(".slide-left").removeClass("clicked")
+})
+$(document).on("click", function() {
+    $(".content-info").hide();
 })
