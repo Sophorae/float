@@ -37,12 +37,6 @@ $(".back-top").on("click", function() {
         "scrollTop": "0"
     }, 200)
 })
-/* $(".browser-history, .my-collection").on("click", function() {
-    $(".slide-left").removeClass("clicked")
-    $(".content-info").hide();
-    $(this).addClass("clicked")
-    $(this).children(".content-info").show();
-}) */
 $(".float-box").children("div").on("click", function() {
     if ($(this).attr("data-info") == "info") {
         $(".slide-left").removeClass("clicked")
