@@ -13,9 +13,25 @@
         html, body {
             height: 2000px;
         }
+        a {
+            text-decoration: none;
+        }
+        ul, li {
+            list-style: none;
+        }
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        .clearfix {
+            zoom: 1;
+        }
     </style>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./iconfont/style.css">
 </head>
 <body>
     <div class="float-box">
@@ -41,7 +57,32 @@
             <div class="slide-info">
                 <a href="javascript:;">我的收藏</a>
             </div>
-            <div class="collection-info"></div>
+            <div class="collection-info content-info">
+                <p class="content-title">
+                    我收藏的车
+                    <i></i>
+                </p>
+                <ul class="cars-list clearfix">
+                    <li>
+                        <a href="javascript:;">
+                            <img src="https://photo.iautos.cn/carupload/photo/2018/0626/16/medium/20180626161157229344.jpg" alt="">
+                            <div class="car-info">
+                                <p class="car-name">奇骏 XL 2.0L 舒适版</p>
+                                <p class="car-tips">
+                                    <span>2006-01</span>
+                                    |
+                                    <span>15.4万公里</span>
+                                </p>
+                                <p class="car-price">
+                                    15.39
+                                    <span>万</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <em></em>
+            </div>
         </div>
         <div class="browser-history slide-left">
             <span class="icon--2"></span>

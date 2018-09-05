@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'iconfont';
-  src:  url('iconfont.eot?w8vjx8');
-  src:  url('iconfont.eot?w8vjx8#iefix') format('embedded-opentype'),
-    url('iconfont.ttf?w8vjx8') format('truetype'),
-    url('iconfont.woff?w8vjx8') format('woff'),
-    url('iconfont.svg?w8vjx8#iconfont') format('svg');
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?cu2wei');
+  src:  url('fonts/icomoon.eot?cu2wei#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?cu2wei') format('truetype'),
+    url('fonts/icomoon.woff?cu2wei') format('woff'),
+    url('fonts/icomoon.svg?cu2wei#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'iconfont' !important;
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -24,20 +24,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-uniE93D .path1:before {
-  content: "\e93d";
-  color: rgb(228, 57, 60);
-}
-.icon-uniE93D .path2:before {
-  content: "\e93e";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-uniE93D .path3:before {
-  content: "\e93f";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
 .icon--400:before {
   content: "\e900";
   color: #979797;
@@ -162,159 +148,171 @@
   content: "\e919";
   color: #979797;
 }
-.icon-1:before {
-  content: "\e91a";
-  color: #a4a4a4;
-}
 .icon--HOT .path1:before {
-  content: "\e91b";
+  content: "\e91a";
   color: rgb(242, 151, 24);
 }
 .icon--HOT .path2:before {
-  content: "\e91c";
-  margin-left: -2em;
+  content: "\e91b";
+  margin-left: -1em;
   color: rgb(255, 255, 255);
 }
 .icon--HOT .path3:before {
-  content: "\e91d";
-  margin-left: -2em;
+  content: "\e91c";
+  margin-left: -1em;
   color: rgb(255, 255, 255);
 }
 .icon--HOT .path4:before {
-  content: "\e91e";
-  margin-left: -2em;
+  content: "\e91d";
+  margin-left: -1em;
   color: rgb(255, 255, 255);
 }
 .icon--5:before {
-  content: "\e91f";
+  content: "\e91e";
   color: #ccc;
 }
 .icon--6:before {
-  content: "\e920";
+  content: "\e91f";
   color: #f29718;
 }
 .icon--7:before {
-  content: "\e921";
+  content: "\e920";
   color: #f29718;
 }
 .icon--8:before {
-  content: "\e922";
+  content: "\e921";
   color: #f29718;
 }
 .icon--9:before {
-  content: "\e923";
+  content: "\e922";
   color: #f29718;
 }
 .icon-01 .path1:before {
-  content: "\e924";
+  content: "\e923";
   color: rgb(241, 241, 241);
 }
 .icon-01 .path2:before {
-  content: "\e925";
-  margin-left: -1.849609375em;
+  content: "\e924";
+  margin-left: -1em;
   color: rgb(220, 220, 220);
 }
 .icon-01 .path3:before {
-  content: "\e926";
-  margin-left: -1.849609375em;
+  content: "\e925";
+  margin-left: -1em;
   color: rgb(220, 220, 220);
 }
 .icon-02 .path1:before {
-  content: "\e927";
+  content: "\e926";
   color: rgb(230, 230, 230);
 }
 .icon-02 .path2:before {
-  content: "\e928";
-  margin-left: -1.849609375em;
+  content: "\e927";
+  margin-left: -1em;
   color: rgb(210, 210, 210);
 }
 .icon-02 .path3:before {
-  content: "\e929";
-  margin-left: -1.849609375em;
+  content: "\e928";
+  margin-left: -1em;
   color: rgb(210, 210, 210);
 }
-.icon-2 .path1:before {
-  content: "\e92a";
-  color: rgb(234, 201, 54);
-}
-.icon-2 .path2:before {
-  content: "\e92b";
-  margin-left: -1.3330078125em;
-  color: rgb(233, 167, 41);
-}
-.icon-2 .path3:before {
-  content: "\e92c";
-  margin-left: -1.3330078125em;
-  color: rgb(233, 167, 41);
-}
-.icon-2 .path4:before {
-  content: "\e92d";
-  margin-left: -1.3330078125em;
-  color: rgb(233, 167, 41);
-}
-.icon-2 .path5:before {
-  content: "\e92e";
-  margin-left: -1.3330078125em;
-  color: rgb(236, 214, 53);
-}
-.icon--10:before {
-  content: "\e92f";
-  color: #979797;
-}
-.icon--HOT1 .path1:before {
-  content: "\e930";
-  color: rgb(242, 151, 24);
-}
-.icon--HOT1 .path2:before {
-  content: "\e931";
-  margin-left: -1.75em;
-  color: rgb(255, 255, 255);
-}
-.icon--HOT1 .path3:before {
-  content: "\e932";
-  margin-left: -1.75em;
-  color: rgb(242, 151, 24);
-}
-.icon-3:before {
-  content: "\e933";
+.icon-uniE929:before {
+  content: "\e929";
   color: #d8d8d8;
 }
-.icon-uniE934 .path1:before {
-  content: "\e934";
+.icon-1 .path1:before {
+  content: "\e92a";
   color: rgb(216, 216, 216);
 }
-.icon-uniE934 .path2:before {
-  content: "\e935";
+.icon-1 .path2:before {
+  content: "\e92b";
   margin-left: -1em;
   color: rgb(216, 216, 216);
 }
-.icon-uniE934 .path3:before {
-  content: "\e936";
+.icon-1 .path3:before {
+  content: "\e92c";
   margin-left: -1em;
   color: rgb(216, 216, 216);
 }
-.icon-uniE934 .path4:before {
-  content: "\e937";
+.icon-1 .path4:before {
+  content: "\e92d";
   margin-left: -1em;
   color: rgb(221, 221, 221);
 }
+.icon--10:before {
+  content: "\e92e";
+  color: #b3b3b3;
+}
 .icon--11:before {
+  content: "\e92f";
+  color: #b3b3b3;
+}
+.icon--12:before {
+  content: "\e930";
+  color: #b3b3b3;
+}
+.icon-2 .path1:before {
+  content: "\e931";
+  color: rgb(228, 57, 60);
+}
+.icon-2 .path2:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-2 .path3:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon--13:before {
+  content: "\e934";
+  color: #8c8c8c;
+}
+.icon-3 .path1:before {
+  content: "\e935";
+  color: rgb(234, 201, 54);
+}
+.icon-3 .path2:before {
+  content: "\e936";
+  margin-left: -1em;
+  color: rgb(233, 167, 41);
+}
+.icon-3 .path3:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(233, 167, 41);
+}
+.icon-3 .path4:before {
   content: "\e938";
+  margin-left: -1em;
+  color: rgb(233, 167, 41);
+}
+.icon-3 .path5:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(236, 214, 53);
+}
+.icon-4:before {
+  content: "\e93a";
+  color: #a4a4a4;
+}
+.icon-uniE93B:before {
+  content: "\e93b";
+  color: #a4a4a4;
+}
+.icon-uniE93C:before {
+  content: "\e93c";
+  color: #a4a4a4;
+}
+.icon-uniE93D:before {
+  content: "\e93d";
+  color: #a4a4a4;
+}
+.icon--14:before {
+  content: "\e93e";
   color: #979797;
 }
 .icon-011:before {
-  content: "\e939";
+  content: "\e93f";
   color: #f29600;
-}
-.icon--12:before {
-  content: "\e93a";
-  color: #b3b3b3;
-}
-.icon--13:before {
-  content: "\e93b";
-  color: #b3b3b3;
-}
-.icon--14:before {
-  content: "\e93c";
-  color: #b3b3b3;
 }

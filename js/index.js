@@ -37,3 +37,7 @@ $(".back-top").on("click", function() {
         "scrollTop": "0"
     }, 200)
 })
+$(".slide-left").on("click", function() {
+    $(".content-info").hide();
+    $(this).children(".content-info").show();
+})
