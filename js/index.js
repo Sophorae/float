@@ -37,17 +37,26 @@ $(".back-top").on("click", function() {
         "scrollTop": "0"
     }, 200)
 })
-$(".slide-left").on("click", function() {
+/* $(".browser-history, .my-collection").on("click", function() {
     $(".slide-left").removeClass("clicked")
     $(".content-info").hide();
     $(this).addClass("clicked")
     $(this).children(".content-info").show();
+}) */
+$(".float-box").children("div").on("click", function() {
+    if ($(this).attr("data-info") == "info") {
+        $(".slide-left").removeClass("clicked")
+        $(".content-info").hide();
+        $(this).addClass("clicked")
+        $(this).children(".content-info").show();
+    } else {
+        $(".slide-left").removeClass("clicked")
+        $(".content-info").hide();
+    }
 })
-$(".close-info").on("click", function() {
-    event.stopPropagation();
+$(".close-info").on("click", function(e) {
+    var evt = window.event ? window.event : e.originalEvent;
+    evt.stopPropagation ? evt.stopPropagation() : evt.cancelBubble = true;
     $(".content-info").hide();
     $(".slide-left").removeClass("clicked")
-})
-$(document).on("click", function() {
-    $(".content-info").hide();
 })
