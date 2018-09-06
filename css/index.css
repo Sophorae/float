@@ -85,9 +85,9 @@
     display: none;
     top: -325px;
     right: 40px;
-    padding: 0 21px;
-    width: 400px;
-    height: 555px;
+    padding: 0 20px;
+    width: 536px;
+    height: 680px;
     text-align: left;
     background: #ffffff;
     box-shadow: 0 0 10px 1px #eeeeee;
@@ -96,18 +96,19 @@
 .float-box .slide-left .content-info .content-title {
     position: relative;
     font-size: 18px;
-    height: 57px;
-    line-height: 57px;
+    height: 63px;
+    line-height: 63px;
+    color: #333333;
 }
 .float-box .slide-left .content-info .content-title span {
     position: absolute;
     top: 16px;
     right: 0;
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     text-align: center;
     line-height: 24px;
-    font-size: 12px;
+    font-size: 11px;
     cursor: pointer;
 }
 .float-box .slide-left .content-info .cars-list  li {
