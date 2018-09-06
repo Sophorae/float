@@ -49,8 +49,17 @@ $(".float-box").children("div").on("click", function() {
     }
 })
 $(".close-info").on("click", function(e) {
-    var evt = window.event ? window.event : e.originalEvent;
+    var evt = window.event ? window.event : e;
     evt.stopPropagation ? evt.stopPropagation() : evt.cancelBubble = true;
     $(".content-info").hide();
     $(".slide-left").removeClass("clicked")
+})
+$(document).on("click", "", function(e) {
+    var evt = window.event ? window.event : e;
+    if($(evt.target).hasClass("my-collection") || $(evt.target).hasClass("browser-history") || $(evt.target).parents(".my-collection").length > 0 || $(evt.target).parents(".browser-history").length > 0) {
+
+    } else {
+        $(".slide-left").removeClass("clicked")
+        $(".content-info").hide();
+    }
 })
