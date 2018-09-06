@@ -37,30 +37,37 @@ $(".back-top").on("click", function() {
         "scrollTop": "0"
     }, 200)
 })
-$(".float-box").children("div").on("click", function() {
-    if ($(this).attr("data-info") == "info") {
-        $(".slide-left").removeClass("clicked")
-        $(".content-info").fadeOut(150);
-        $(this).addClass("clicked")
-        $(this).children(".content-info").fadeIn(275);
-    } else {
-        $(".slide-left").removeClass("clicked")
-        $(".content-info").fadeOut(150);
-    }
-})
 $(".close-info").on("click", function(e) {
     var evt = window.event ? window.event : e;
     evt.stopPropagation ? evt.stopPropagation() : evt.cancelBubble = true;
-    $(".content-info").fadeOut(150);
+    $(".content-info").hide();
     $(".slide-left").removeClass("clicked")
 })
 $(document).on("click", function(e) {
     var evt = window.event ? window.event : e;
     var $el = $(evt.target);
-    if($el.hasClass("my-collection") || $el.hasClass("browser-history") || $el.parents(".my-collection").length > 0 || $el.parents(".browser-history").length > 0) {
-
+    if($el.hasClass("my-collection") || $el.parents(".my-collection").length > 0) {
+        if ($(".browser-history").hasClass("clicked")) {
+            $(".browser-history").removeClass("clicked");
+            $(".browser-history").children(".content-info").hide();
+            $(".my-collection").addClass("clicked");
+            $(".my-collection").children(".content-info").show();
+        } else {
+            $(".my-collection").addClass("clicked");
+            $(".my-collection").children(".content-info").show();
+        }
+    } else if ($el.hasClass("browser-history") || $el.parents(".browser-history").length > 0) {
+        if ($(".my-collection").hasClass("clicked")) {
+            $(".my-collection").removeClass("clicked");
+            $(".my-collection").children(".content-info").hide();
+            $(".browser-history").addClass("clicked");
+            $(".browser-history").children(".content-info").show();
+        } else {
+            $(".browser-history").addClass("clicked");
+            $(".browser-history").children(".content-info").show();
+        }
     } else {
         $(".slide-left").removeClass("clicked")
-        $(".content-info").fadeOut(150);
+        $(".content-info").hide();
     }
 })
