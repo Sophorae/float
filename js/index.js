@@ -1,4 +1,4 @@
-$(".float-box").on("mouseenter", "div", function() {
+$(".float-box").on("mouseenter", "div", function () {
     var className = $(this).attr("class");
     className = className ? className.split(" ")[0] : "";
     if (className == "QR-code") {
@@ -9,14 +9,14 @@ $(".float-box").on("mouseenter", "div", function() {
         $(this).children(".slide-info").show().stop(true).animate({
             width: "75px"
         }, 275);
-    } else if(className == "contact-number") {
+    } else if (className == "contact-number") {
         $(this).addClass("active");
         $(this).children(".slide-info").show().stop(true).animate({
             width: "122px"
         }, 275);
     }
 })
-$(".float-box").on("mouseleave", "div", function() {
+$(".float-box").on("mouseleave", "div", function () {
     var className = $(this).attr("class")
     className = className ? className.split(" ")[0] : "";
     if (className == "QR-code") {
@@ -26,27 +26,27 @@ $(".float-box").on("mouseleave", "div", function() {
         var this_ = this;
         $(this).children(".slide-info").stop(true).animate({
             width: "0"
-        }, 150, function() {
+        }, 150, function () {
             $(this).hide();
             $(this_).removeClass("active")
         });
     }
 })
-$(".back-top").on("click", function() {
+$(".back-top").on("click", function () {
     $("html, body").animate({
         "scrollTop": "0"
     }, 200)
 })
-$(".close-info").on("click", function(e) {
+$(".close-info").on("click", function (e) {
     var evt = window.event ? window.event : e;
     evt.stopPropagation ? evt.stopPropagation() : evt.cancelBubble = true;
     $(".content-info").hide();
     $(".slide-left").removeClass("clicked")
 })
-$(document).on("click", function(e) {
+$(document).on("click", function (e) {
     var evt = window.event ? window.event : e;
     var $el = $(evt.target);
-    if($el.hasClass("my-collection") || $el.parents(".my-collection").length > 0) {
+    if ($el.hasClass("my-collection") || $el.parents(".my-collection").length > 0) {
         if ($(".browser-history").hasClass("clicked")) {
             $(".browser-history").removeClass("clicked").children(".content-info").hide();
             $(".my-collection").addClass("clicked").children(".content-info").show();
