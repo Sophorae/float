@@ -54,7 +54,7 @@ $(".close-info").on("click", function(e) {
     $(".content-info").fadeOut(150);
     $(".slide-left").removeClass("clicked")
 })
-$(document).on("click", "", function(e) {
+$(document).on("click", function(e) {
     var evt = window.event ? window.event : e;
     var $el = $(evt.target);
     if($el.hasClass("my-collection") || $el.hasClass("browser-history") || $el.parents(".my-collection").length > 0 || $el.parents(".browser-history").length > 0) {
