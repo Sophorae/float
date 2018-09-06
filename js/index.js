@@ -56,7 +56,8 @@ $(".close-info").on("click", function(e) {
 })
 $(document).on("click", "", function(e) {
     var evt = window.event ? window.event : e;
-    if($(evt.target).hasClass("my-collection") || $(evt.target).hasClass("browser-history") || $(evt.target).parents(".my-collection").length > 0 || $(evt.target).parents(".browser-history").length > 0) {
+    var $el = $(evt.target);
+    if($el.hasClass("my-collection") || $el.hasClass("browser-history") || $el.parents(".my-collection").length > 0 || $el.parents(".browser-history").length > 0) {
 
     } else {
         $(".slide-left").removeClass("clicked")
