@@ -48,26 +48,20 @@ $(document).on("click", function(e) {
     var $el = $(evt.target);
     if($el.hasClass("my-collection") || $el.parents(".my-collection").length > 0) {
         if ($(".browser-history").hasClass("clicked")) {
-            $(".browser-history").removeClass("clicked");
-            $(".browser-history").children(".content-info").hide();
-            $(".my-collection").addClass("clicked");
-            $(".my-collection").children(".content-info").show();
+            $(".browser-history").removeClass("clicked").children(".content-info").hide();
+            $(".my-collection").addClass("clicked").children(".content-info").show();
         } else {
-            $(".my-collection").addClass("clicked");
-            $(".my-collection").children(".content-info").show();
+            $(".my-collection").addClass("clicked").children(".content-info").show();
         }
     } else if ($el.hasClass("browser-history") || $el.parents(".browser-history").length > 0) {
         if ($(".my-collection").hasClass("clicked")) {
-            $(".my-collection").removeClass("clicked");
-            $(".my-collection").children(".content-info").hide();
-            $(".browser-history").addClass("clicked");
-            $(".browser-history").children(".content-info").show();
+            $(".my-collection").removeClass("clicked").children(".content-info").hide();
+            $(".browser-history").addClass("clicked").children(".content-info").show();
         } else {
-            $(".browser-history").addClass("clicked");
-            $(".browser-history").children(".content-info").show();
+            $(".browser-history").addClass("clicked").children(".content-info").show();
         }
     } else {
-        $(".slide-left").removeClass("clicked")
+        $(".slide-left").removeClass("clicked");
         $(".content-info").hide();
     }
 })
