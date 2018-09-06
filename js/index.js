@@ -40,18 +40,18 @@ $(".back-top").on("click", function() {
 $(".float-box").children("div").on("click", function() {
     if ($(this).attr("data-info") == "info") {
         $(".slide-left").removeClass("clicked")
-        $(".content-info").hide();
+        $(".content-info").fadeOut(150);
         $(this).addClass("clicked")
-        $(this).children(".content-info").show();
+        $(this).children(".content-info").fadeIn(275);
     } else {
         $(".slide-left").removeClass("clicked")
-        $(".content-info").hide();
+        $(".content-info").fadeOut(150);
     }
 })
 $(".close-info").on("click", function(e) {
     var evt = window.event ? window.event : e;
     evt.stopPropagation ? evt.stopPropagation() : evt.cancelBubble = true;
-    $(".content-info").hide();
+    $(".content-info").fadeOut(150);
     $(".slide-left").removeClass("clicked")
 })
 $(document).on("click", "", function(e) {
@@ -61,6 +61,6 @@ $(document).on("click", "", function(e) {
 
     } else {
         $(".slide-left").removeClass("clicked")
-        $(".content-info").hide();
+        $(".content-info").fadeOut(150);
     }
 })
