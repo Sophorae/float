@@ -1,3 +1,4 @@
+
 $(".float-box").on("mouseenter", "div", function () {
     var className = $(this).attr("class");
     className = className ? className.split(" ")[0] : "";
@@ -40,7 +41,9 @@ $(".close-info").on("click", function (e) {
     $(".slide-left").removeClass("clicked")
 })
 $(document).on("click", function (e) {
+    console.log(e)
     var evt = window.event ? window.event : e;
+    target = evt.target ? evt.target : evt.originalEvent.srcElement;
     var $el = $(evt.target);
     if ($el.hasClass("my-collection") || $el.parents(".my-collection").length > 0) {
         if ($(".browser-history").hasClass("clicked")) {
