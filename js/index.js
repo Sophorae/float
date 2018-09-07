@@ -2,16 +2,13 @@ $(".float-box").on("mouseenter", "div", function () {
     var className = $(this).attr("class");
     className = className ? className.split(" ")[0] : "";
     if (className == "QR-code") {
-        $(this).addClass("active")
-        $(this).children(".code-info").stop(true).fadeIn(275);
+        $(this).addClass("active").children(".code-info").stop(true).fadeIn(275);
     } else if (className == "my-collection" || className == "browser-history" || className == "feed-back" || className == "back-top") {
-        $(this).addClass("active")
-        $(this).children(".slide-info").show().stop(true).animate({
+        $(this).addClass("active").children(".slide-info").show().stop(true).animate({
             width: "75px"
         }, 275);
     } else if (className == "contact-number") {
-        $(this).addClass("active");
-        $(this).children(".slide-info").show().stop(true).animate({
+        $(this).addClass("active").children(".slide-info").show().stop(true).animate({
             width: "122px"
         }, 275);
     }
@@ -20,8 +17,7 @@ $(".float-box").on("mouseleave", "div", function () {
     var className = $(this).attr("class")
     className = className ? className.split(" ")[0] : "";
     if (className == "QR-code") {
-        $(this).removeClass("active")
-        $(this).children(".code-info").stop(true).fadeOut(150);
+        $(this).removeClass("active").children(".code-info").stop(true).fadeOut(150);
     } else if (className == "my-collection" || className == "browser-history" || className == "contact-number" || className == "feed-back" || className == "back-top") {
         var this_ = this;
         $(this).children(".slide-info").stop(true).animate({
