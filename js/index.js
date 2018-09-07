@@ -33,30 +33,136 @@ $(".back-top").on("click", function () { //回到顶部
         "scrollTop": "0"
     }, 200)
 })
-$(".close-info").on("click", function (e) { //关闭悬浮穿
+$(".close-info").on("click", function (e) { //关闭悬浮窗
     var evt = window.event ? window.event : e;
     evt.stopPropagation ? evt.stopPropagation() : evt.cancelBubble = true;
     $(".content-info").hide();
     $(".slide-left").removeClass("clicked")
 })
-$(document).on("click", function (e) { // 全局关闭悬浮窗
-    console.log(e)
+function getCookie(key) {
+    var cookie = document.cookie;
+    if (cookie) {
+        var arr = cookie.split("; ");
+        for (var i = 0; i < arr.length; i++) {
+            var item = arr[i].split("=");
+            if (key == item[0]) {
+                return item[1]
+            } else {
+                return false;
+            }
+        }
+    } else {
+        return false;
+    }
+}
+/* 
+<li>
+    <a href="url">
+        <img src="https://photo.iautos.cn/carupload/photo/2018/0626/16/medium/20180626161157229344.jpg" alt="">
+        <div class="car-info">
+            <p class="car-name">奇骏 XL 2.0L 舒适版</p>
+            <p class="car-tips">
+                <span>2006-01</span>
+                |
+                <span>15.4万公里</span>
+            </p>
+            <p class="car-price">
+                15.39
+                <span>万</span>
+            </p>
+        </div>
+    </a>
+</li>
+格式
+{
+    url: "",
+    imgUrl: "",
+    carname: "",
+    year: "",
+    distance: "",
+    price: "",
+}
+*/
+function showCollection() {
+    $(".my-collection").addClass("clicked").children(".content-info").show();
+    if (getCookie("collection")) {
+        var collectionArray = getCookie("collection");
+        var html = "";
+        collectionArray.forEach(function(currentValue, index, arr) {
+            html += `<li>
+                        <a href="${currentValue.url}">
+                            <img src="${currentValue.imgUrl}" alt="">
+                            <div class="car-info">
+                                <p class="car-name">${currentValue.carName}</p>
+                                <p class="car-tips">
+                                    <span>${currentValue.year}</span>
+                                    |
+                                    <span>${currentValue.distance}</span>
+                                </p>
+                                <p class="car-price">
+                                    ${currentValue.price}
+                                    <span>万</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>`
+        });
+        $(".collection-info .cars-list").html(html);
+    } else {
+        $(".collection-info .have-info").hide();
+        $(".collection-info .no-info").show();
+    }
+}
+function showBrowserHistory() {
+    $(".browser-history").addClass("clicked").children(".content-info").show();
+    if (getCookie("history")) {
+        var historyArray = getCookie("history");
+        historyArray.forEach(function(currentValue, index, arr) {
+            var collectionArray = getCookie("collection");
+            var html = "";
+            collectionArray.forEach(function(currentValue, index, arr) {
+                html += `<li>
+                            <a href="${currentValue.url}">
+                                <img src="${currentValue.imgUrl}" alt="">
+                                <div class="car-info">
+                                    <p class="car-name">${currentValue.carName}</p>
+                                    <p class="car-tips">
+                                        <span>${currentValue.year}</span>
+                                        |
+                                        <span>${currentValue.distance}</span>
+                                    </p>
+                                    <p class="car-price">
+                                        ${currentValue.price}
+                                        <span>万</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>`
+            });
+            $(".collection-info .cars-list").html(html);
+        });
+    } else {
+        $(".history-info .have-info").hide();
+        $(".history-info .no-info").show();
+    }
+}
+$(document).on("click", function (e) { // 收藏和历史展示
     var evt = window.event ? window.event : e;
     target = evt.target ? evt.target : evt.originalEvent.srcElement;
     var $el = $(evt.target);
     if ($el.hasClass("my-collection") || $el.parents(".my-collection").length > 0) {
         if ($(".browser-history").hasClass("clicked")) {
             $(".browser-history").removeClass("clicked").children(".content-info").hide();
-            $(".my-collection").addClass("clicked").children(".content-info").show();
+            showCollection();
         } else {
-            $(".my-collection").addClass("clicked").children(".content-info").show();
+            showCollection();
         }
     } else if ($el.hasClass("browser-history") || $el.parents(".browser-history").length > 0) {
         if ($(".my-collection").hasClass("clicked")) {
             $(".my-collection").removeClass("clicked").children(".content-info").hide();
-            $(".browser-history").addClass("clicked").children(".content-info").show();
+            showBrowserHistory();
         } else {
-            $(".browser-history").addClass("clicked").children(".content-info").show();
+            showBrowserHistory();
         }
     } else {
         $(".slide-left").removeClass("clicked");
