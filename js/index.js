@@ -58,16 +58,16 @@ function getCookie(key) {
 /* 
 <li>
     <a href="url">
-        <img src="https://photo.iautos.cn/carupload/photo/2018/0626/16/medium/20180626161157229344.jpg" alt="">
+        <img src="imgUrl" alt="">
         <div class="car-info">
-            <p class="car-name">奇骏 XL 2.0L 舒适版</p>
+            <p class="car-name">  carname  </p>
             <p class="car-tips">
-                <span>2006-01</span>
+                <span>  year  </span>
                 |
-                <span>15.4万公里</span>
+                <span>  distance  </span>
             </p>
             <p class="car-price">
-                15.39
+                price
                 <span>万</span>
             </p>
         </div>
