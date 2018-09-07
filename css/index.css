@@ -62,7 +62,7 @@
     line-height: 17px;
 }
 
-.float-box .slide-left  .slide-info {
+.float-box .slide-left  .slide-text {
     display: none;
     top: 0;
     right: 38px;
@@ -76,7 +76,7 @@
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
-.float-box .slide-left  .slide-info a {
+.float-box .slide-left  .slide-text a {
     color: #ffffff;
     text-decoration: none;
 }
