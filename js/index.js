@@ -1,5 +1,4 @@
-
-$(".float-box").on("mouseenter", "div", function () {
+$(".float-box").on("mouseenter", "div", function () { //悬浮窗鼠标滑入
     var className = $(this).attr("class");
     className = className ? className.split(" ")[0] : "";
     if (className == "QR-code") {
@@ -14,7 +13,7 @@ $(".float-box").on("mouseenter", "div", function () {
         }, 275);
     }
 })
-$(".float-box").on("mouseleave", "div", function () {
+$(".float-box").on("mouseleave", "div", function () { //悬浮窗鼠标滑出
     var className = $(this).attr("class")
     className = className ? className.split(" ")[0] : "";
     if (className == "QR-code") {
@@ -29,18 +28,18 @@ $(".float-box").on("mouseleave", "div", function () {
         });
     }
 })
-$(".back-top").on("click", function () {
+$(".back-top").on("click", function () { //回到顶部
     $("html, body").animate({
         "scrollTop": "0"
     }, 200)
 })
-$(".close-info").on("click", function (e) {
+$(".close-info").on("click", function (e) { //关闭悬浮穿
     var evt = window.event ? window.event : e;
     evt.stopPropagation ? evt.stopPropagation() : evt.cancelBubble = true;
     $(".content-info").hide();
     $(".slide-left").removeClass("clicked")
 })
-$(document).on("click", function (e) {
+$(document).on("click", function (e) { // 全局关闭悬浮窗
     console.log(e)
     var evt = window.event ? window.event : e;
     target = evt.target ? evt.target : evt.originalEvent.srcElement;
