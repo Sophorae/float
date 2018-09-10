@@ -115,32 +115,44 @@ function showCollection() {
 }
 function showBrowserHistory() {
     $(".browser-history").addClass("clicked").children(".content-info").show();
-    if (getCookie("history")) {
+    if (true || getCookie("history")) {
         var historyArray = getCookie("history");
+        historyArray = [{
+            url: "123",
+            imgUrl: "https://www.baidu.com/img/gif_dff8eb67abcf1c24f800c7459ff73ae0.gif",
+            carName: "456",
+            year: "5",
+            distance: "15",
+            price: "789"
+        }, {
+            url: "123",
+            imgUrl: "https://www.baidu.com/img/gif_dff8eb67abcf1c24f800c7459ff73ae0.gif",
+            carName: "456",
+            year: "5",
+            distance: "15",
+            price: "789"
+        }]
+        var html = "";
         historyArray.forEach(function(currentValue, index, arr) {
-            var collectionArray = getCookie("collection");
-            var html = "";
-            collectionArray.forEach(function(currentValue, index, arr) {
-                html += `<li>
-                            <a href="${currentValue.url}">
-                                <img src="${currentValue.imgUrl}" alt="">
-                                <div class="car-info">
-                                    <p class="car-name">${currentValue.carName}</p>
-                                    <p class="car-tips">
-                                        <span>${currentValue.year}</span>
-                                        |
-                                        <span>${currentValue.distance}</span>
-                                    </p>
-                                    <p class="car-price">
-                                        ${currentValue.price}
-                                        <span>万</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>`
-            });
-            $(".collection-info .cars-list").html(html);
+            html += `<li>
+                        <a href="${currentValue.url}">
+                            <img src="${currentValue.imgUrl}" alt="">
+                            <div class="car-info">
+                                <p class="car-name">${currentValue.carName}</p>
+                                <p class="car-tips">
+                                    <span>${currentValue.year}</span>
+                                    |
+                                    <span>${currentValue.distance}</span>
+                                </p>
+                                <p class="car-price">
+                                    ${currentValue.price}
+                                    <span>万</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>`
         });
+        $(".history-info .cars-list").html(html);
     } else {
         $(".history-info .have-info").hide();
         $(".history-info .no-info").show();
